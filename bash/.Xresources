@@ -1,0 +1,84 @@
+URxvt*termName: rxvt-unicode
+URxvt*depth: 32
+URxvt*borderLess: false
+URxvt*tintColor: #FFFAF0
+URxvt*inheritPixmap: true
+
+!! preferences
+URxvt*imLocale: ja_JP.UTF-8
+URxvt*saveLines: 12000
+URxvt*transparent: true
+URxvt*shading: 20
+! fade text n% upon unfocus
+!URxvt*fading: 40
+! darken=(0 to 100) lighten=(-1 to -100)
+!URxvt*shading: 30
+! tint background with this color
+!URxvt*tintColor: black
+
+!! scroll
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+
+!! cursor preferences
+URxvt*cursorBlink: false
+URxvt*cursorUnderline: false
+URxvt*cursorColor: #ffffff
+
+!! tabs
+!!URxvt.perl-ext-common: default,tabbed
+!!URxvt.tabbed.tabbar-fg: 14
+!!URxvt.tabbed.tabbar-bg: 6 
+!!URxvt.tabbed.tab-fg: 14 
+!!URxvt.tabbed.tab-bg: 6 
+
+!! urlLauncher settings
+URxvt*urlLauncher: /usr/bin/firefox
+URxvt*matcher.button: 1
+
+!! fonts
+URxvt*font: xft:Kochi Gothic:antialias=false:size=10, \
+URxvt*boldFont: xft:Ricty:bold:size=10:antialiase=false, \
+ft:Dejavu Sans Mono:pixelsize=11:style=Bold:antialias=false
+URxvt.letterSpace: -4
+
+!! color
+!URxvt.background: #232323
+URxvt.background: #000000
+URxvt.foreground: #FFFFFF
+
+URxvt.colorBD:    #CFCFCF
+URxvt.colorUL:    #A0A0A0
+URxvt.colorIT:    #686868
+
+!BLK
+URxvt.color0:     #303030
+URxvt.color8:     #686868
+
+!RED
+URxvt.color9:     #FFA7DA
+URxvt.color1:     #D370A3
+
+!GRN
+URxvt.color10:    #A3D572
+URxvt.color2:     #6D9E3F
+
+!BLU
+URxvt.color12:    #98CBFE
+URxvt.color4:     #6095C5
+
+!YEL
+URxvt.color11:    #EFBD8B
+URxvt.color3:     #B58858
+
+!CYN
+URxvt.color14:    #75DAA9
+URxvt.color6:     #3BA275
+
+!MAG
+URxvt.color13:    #E5B0FF
+URxvt.color5:     #AC7BDE
+
+!WHT
+URxvt.color7:     #CFCFCF
+URxvt.color15:    #FFFFFF

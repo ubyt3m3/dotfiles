@@ -1,0 +1,25 @@
+#!/bin/bash 
+MPD_HOST=/home/ubyt3m3/.config/mpd/socket
+MPC_NAME=$(mpc -h $MPD_HOST current | tr -d '\n')
+#echo $MPC_NAME | file -i - > /home/ubyt3m3/.config/i3/test
+#ENCODING=$($MPC_NAME | file -i - | sed 's/.*charset=\(.*\)/\1/')
+#echo $ENCODING > /home/ubyt3m3/.config/i3/test
+
+#MPC_NAME=$(mpc -h $MPD_HOST current | iconv -c -f utf-8 -t euc-jp | iconv -f euc-jp -t utf-8)
+MPC_STATE=$(mpc -h $MPD_HOST | grep "^\[playing\]" | awk '{print $1}')
+MPC_NAME_NUM=$(echo $MPC_NAME | head -1 | wc -c )
+MPC_NAME_SHORT=$(echo $MPC_NAME | head -1 | head -c 30)
+# Replace special characters
+#MPC_NAME=$(echo $MPC_NAME | sed -r 's/[&]+/&amp;/g')
+
+#echo $MPC_NAME > /home/ubyt3m3/.config/i3/test
+
+if [ "$MPC_STATE" == "[playing]" ];then 
+    if [ "$MPC_NAME_NUM" -lt 30 ];then 
+        echo -e "$MPC_NAME"
+    else
+        echo -e "$MPC_NAME_SHORT..."
+    fi
+else
+    echo -e "[Stopped]"
+fi
