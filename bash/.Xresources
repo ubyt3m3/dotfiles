@@ -37,8 +37,8 @@ URxvt*urlLauncher: /usr/bin/firefox
 URxvt*matcher.button: 1
 
 !! fonts
-URxvt*font: xft:Ricty:antialias=true:size=11:hinting=true, \
-URxvt*boldFont: xft:Ricty:bold:size=11:antialiase=true:hinting, \
+URxvt*font: xft:Ricty:style=Regular:antialias=true:size=11:hinting=true, \
+URxvt*boldFont: xft:Ricty:style=Bold:size=11:antialiase=true:hinting, \
 ft:Dejavu Sans Mono:pixelsize=11:style=Bold:antialias=true
 URxvt.letterSpace: -4
 

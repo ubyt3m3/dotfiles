@@ -92,12 +92,18 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1  "Music "
-set $workspace2  "Terminals "
-set $workspace3  "Firefox "
-set $workspace4  "Chromium "
-set $workspace5  "PCManFM "
-set $workspace10 "VM "
+##========================================
+# borders:
+##========================================
+default_border pixel 1
+default_floating_border pixel 1
+
+set $workspace1  " Music"
+set $workspace2  " Terminal"
+set $workspace3  " Firefox"
+set $workspace4  " Chromium"
+set $workspace5  " File Manager"
+set $workspace10 " VirtualBox"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1 
@@ -167,8 +173,8 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-#        status_command i3status -c ~/.config/i3/i3status.conf
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        status_command i3status -c ~/.config/i3/i3status.conf
+#        status_command i3blocks -c ~/.config/i3/i3blocks.conf
 
         font pango:DejaVu Sans Mono fontAwesome 8
 }

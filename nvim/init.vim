@@ -39,7 +39,7 @@ syntax on 		" Turn on syntax highlighting
 
 " make nvim try to detect file types and load plugins for them
 filetype on
-filetype plugin on 
+filetype plugin on
 filetype indent on
 
 set encoding=utf-8
@@ -120,7 +120,8 @@ if &t_Co > 2 || has("gui_running")
     syntax on
 endif
 
-
+"" gruvbox color settings
+let g:gruvbox_contrast_dark = 'hard'
 
 """ vim-airline
 "" smarter tab line
