@@ -36,7 +36,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec "dmenu_run -nf '#8f8b87' -nb '#100c08' -sb '#100c08' -sf '#fffff3' -p '>>'" 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -97,45 +97,60 @@ bindsym $mod+a focus parent
 ##========================================
 default_border pixel 1
 default_floating_border pixel 1
+#for_window [class="^.*"] border pixel 1
+#new_window 1pixel
 
-set $workspace1  " Music"
-set $workspace2  " Terminal"
-set $workspace3  " Firefox"
-set $workspace4  " Chromium"
-set $workspace5  " File Manager"
-set $workspace10 " VirtualBox"
+##========================================
+# workspace:
+##========================================
+set $ws1  "1:  Music"
+set $ws2  "2:  Terminal"
+set $ws3  "3:  Code"
+set $ws4  "4:  Firefox"
+set $ws5  "5:  Chromium"
+set $ws6  "6:  File Manager"
+set $ws7  "7: "
+set $ws8  "8: "
+set $ws9  "9:  VirtualBox"
+set $ws0  "0:  Windows"
 
 # switch to workspace
-bindsym $mod+1 workspace $workspace1 
-bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace $workspace5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace $workspace10
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws0
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace $workspace3
-bindsym $mod+Shift+4 move container to workspace $workspace4
-bindsym $mod+Shift+5 move container to workspace $workspace5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace $workspace10 
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws0
 
 ##========================================
 # Assign workspaces:
 ##========================================
-assign [class="Firefox-esr"] $workspace3
-assign [class="Chromium"] $workspace4
-assign [class="Pcmanfm"] $workspace5
-assign [class="VirtualBox"] $workspace10
+assign [class="Firefox"] $ws4
+assign [class="chromium"] $ws5
+assign [class="Pcmanfm"] $ws6
+assign [class="VirtualBox" title="Oracle VM VirtualBox Manager"] $ws9
+
+##========================================
+# Custome keybindings:
+##========================================
+bindsym $mod+Shift+w exec "VBoxManage startvm win7vb" workspace $ws0;move workspace to output DVI-I-3 
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -170,13 +185,42 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+##========================================
+# Custom color palettes:
+##========================================
+# class                 border  backgr. text    indicator child_border
+client.focused          #c3bfbb #c3bfbb #ffffff #dddddd   #5d5955
+client.focused_inactive #212121 #212121 #86888C #292d2e   #5a5a5a
+client.unfocused        #5d5955 #5d5955 #86888C #292d2e   #5a5a5a
+client.urgent           #d64e4e #d64e4e #ffffff #d64e4e   #d64e4e
+client.placeholder      #100c08 #100c08 #ffffff #212121   #262626
+client.background       #100c08
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status -c ~/.config/i3/i3status.conf
+        status_command python3 ~/.config/i3/i3pystatusconfig.py 
+#        status_command i3status -c ~/.config/i3/i3status.conf
 #        status_command i3blocks -c ~/.config/i3/i3blocks.conf
 
-        font pango:DejaVu Sans Mono fontAwesome 8
+        font pango:DejaVu Sans Mono fontAwesome 9
+#        separator_symbol "::"
+#        separator_symbol            "::"
+        separator_symbol            "  :  "
+
+#   Color panel
+        colors {
+            background #100c08
+            statusline #fffff3
+            separator  #d93636
+
+            #   Indicatores panel
+            #                   border  backgr   text
+            focused_workspace   #100c08 #100c08 #fffff3
+            active_workspace    #100c08 #100c08 #6e6e6e
+            inactive_workspace  #100c08 #100c08 #6e6e6e
+            urgent_workspace    #d93636 #d93636 #f2f2f0
+       }
 }
 
 ##========================================
