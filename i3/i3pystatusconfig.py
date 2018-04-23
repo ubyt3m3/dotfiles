@@ -1,4 +1,9 @@
 from i3pystatus import Status
+import os
+
+# Setting LANG to en_US to avoid 
+# showing dates in Japanese
+os.environ['LANG'] = 'en_US'
 
 status = Status(logfile='$HOME/var/i3pystatus.log')
 
@@ -83,19 +88,19 @@ status.register("network",
     format_down="  Down",)
 
 # Note: requires both netifaces and basiciw (for essid and quality)
-status.register("network",
-    interface="wlo1",
-    color_up="#fffff3",
-    color_down="#6e6e6e",
-    format_up="  {essid} ({quality:03.0f}%) {v4cidr}",
-    format_down="  Down",)
+#status.register("network",
+#    interface="wlo1",
+#    color_up="#fffff3",
+#    color_down="#6e6e6e",
+#    format_up="  {essid} ({quality:03.0f}%) {v4cidr}",
+#    format_down="  Down",)
 
 # Shows disk usage of /home
 # Format:
 # 42/128G
-status.register("disk",
-    path="/home",
-    format="  {used} / {total}GB",)
+#status.register("disk",
+#    path="/home",
+#    format="  {used} / {total}GB",)
 
 # Shows disk usage of /
 # Format:
