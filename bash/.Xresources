@@ -30,7 +30,7 @@ URxvt*skipScroll: true
 !! cursor preferences
 URxvt*cursorBlink: false
 URxvt*cursorUnderline: false
-URxvt*cursorColor: #ffffff
+URxvt*cursorColor: #ff5733
 
 !! tabs
 !!URxvt.perl-ext-common: default,tabbed
