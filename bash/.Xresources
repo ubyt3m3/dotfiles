@@ -6,12 +6,12 @@ URxvt*inheritPixmap: true
 
 !! preferences
 URxvt*loginShell: true
-URxvt*imLocale: ja_JP.UTF-8
+URxvt*imLocale: ja_JP.utf-8
 URxvt*saveLines: 12000
 URxvt*transparent: true
 URxvt*shading: 20
 ! fade text n% upon unfocus
-URxvt*fading: 40
+URxvt*fading: 20
 URxvt*visualBell: true
 ! darken=(0 to 100) lighten=(-1 to -100)
 !URxvt*shading: 30
@@ -44,13 +44,15 @@ URxvt*urlLauncher: /usr/bin/firefox
 URxvt*matcher.button: 1
 
 !! fonts
-URxvt*font: xft:Ricty:pixelsize=11:style=Regular:antialias=true:hinting=true, \
-xft:Font Awesome 5 Free Regular:pixelsie=11:style=Regular, \
-xft:Font Awesome 5 Free Solid:pixelsize=11:style=Solid, \
-xft:Dejavu Sans Mono:pixelsize=11:style=Regular:antialias=true
-URxvt*boldFont: xft:Ricty:pixelsize=11:style=Bold:antialiase=true:hinting, \
-xft:Dejavu Sans Mono:pixelsize=11:style=Bold:antialias=true
-URxvt.letterSpace: -4
+URxvt*font: xft:Ricty:pixelsize=13:style=Regular:antialias=true:hinting=true, \
+xft:Sazanami Gothic:style=Gothic-Regular:pixelsize=13, \
+xft:Kochi Gothic:pixelsize=13:antialias=true;hinting=true, \
+xft:Font Awesome 5 Free Regular:pixelsie=13:style=Regular, \
+xft:Font Awesome 5 Free Solid:pixelsize=13:style=Solid, \
+xft:Dejavu Sans Mono:pixelsize=13:style=Regular:antialias=true
+URxvt*boldFont: xft:Ricty:pixelsize=13:style=Bold:antialiase=true:hinting, \
+xft:Dejavu Sans Mono:pixelsize=13:style=Bold:antialias=true
+!URxvt.letterSpace: -4
 
 !! color
 URxvt.color0:      [90]#282828
