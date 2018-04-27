@@ -1,0 +1,147 @@
+* {
+    backgroundcolor: #2f2f2f;
+    bg1: #ffffff;
+    backgroundcoloralternate: #2f2f2f;
+    separatorcolor: #565656;
+    scrollbarcolor: #ffffff;
+    textcolor: #d0d0d0;
+    textcolorinverse: #d0d0d0;
+    selectioncolor: #ffffff;
+    selectedtextcolor: #d93636;
+
+
+    font-size: 1px;
+    border-color: @separatorcolor;
+    background-color: @backgroundcolor;
+    text-color: @textcolor;
+    margin: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    spacing: 0;
+}
+
+#window {
+    background-color: @backgroundcolor;
+    border-color: @backgroundcolor;
+    border: 1;
+    border-radius: 3px;
+}
+
+#mainbox {
+    border: 0;
+    padding: 0;
+    background-color: @backgroundcolor;
+}
+
+#message {
+    border: 0;
+    padding: 0;
+    background-color: @backgroundcolor;
+}
+
+#textbox {
+    text-color: @messagetextcolor;
+    background-color: @backgroundcolor;
+}
+
+#listview {
+    spacing: 0;
+    scrollbar: true;
+    margin: 0;
+    dynamic: true;
+}
+
+#element {
+    padding: 5;
+    border: 0 0 0 0;
+    border-color: @backgroundcolor;
+    border-radius: 0px;
+    background-color: @backgroundcolor;
+}
+
+#element.normal.normal {
+    background-color: @backgroundcolor;
+}
+
+#element.normal.urgent {
+    background-color: @backgrouncolor;
+}
+
+#element.normal.active {
+    background-color: #434c5e;
+}
+
+
+#element.selected.normal {
+    text-color: @selectedtextcolor;
+}
+
+#element.selected.urgent {
+    text-color: red;
+}
+
+#element.selected.active {
+    text-color: @textcolor;
+}
+
+#element.alternate {
+    background-color: @backgroundcolor;
+}
+
+#element.alternate.normal {
+    background-color: @backgroundcolor;
+}
+
+#element.alternate.urgent {
+    background-color: @backgroundcolor;
+}
+
+#element.alternate.active {
+    background-color: @backgroundcolor;
+}
+
+#scrollbar {
+    border: 0;
+    width: 8px;
+    handle-color: @backgroundcolor;
+    handle-width: 8px;
+    background-color: @backgroundcolor;
+}
+
+#sidebar {
+    border: 0;
+    padding: 0;
+    background-color: red;
+}
+
+#button {
+    spacing: 0;
+    padding: 10;
+    text-color: @textcolor;
+}
+
+#button.selected {
+    text-color: @selectedtextcolor;
+}
+
+#inputbar {
+    border: 0 solid 0 solid 1 solid 0 solid;
+    margin: 0;
+    spacing: 0;
+    border-color: @separatorcolor;
+}
+
+#prompt {
+    padding: 5;
+    background-color: @backgroundcolor;
+    border: 0 0 0 0;
+}
+
+#entry {
+    padding: 5;
+}
+
+#scrollbar handle {
+    border: 0;
+    border-color: @backgroundcolor;
+}

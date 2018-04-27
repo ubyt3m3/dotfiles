@@ -1,0 +1,25 @@
+rofi.theme: ~/.config/rofi/themes/dark_elements.rasi 
+
+rofi.modi:              ssh,window,drun,run
+rofi.sidebar-mode:      true
+rofi.terminal:          urxvt 
+rofi.ssh-client:        ssh
+rofi.ssh-command:       {terminal} -e "{ssh-client} {host}"
+rofi.width:             50
+rofi.lines:             5
+rofi.columns:           1
+rofi.font:              Ricty 12
+#rofi.bw:                0
+#rofi.location:          0
+#rofi.padding:           0
+#rofi.line-padding:      6
+#rofi.levenshtein-sort:  true
+#rofi.case-sensitive:    false
+#rofi.fuzzy:             false
+#rofi.line-margin:       0 
+#rofi.separator-style:   dash 
+#rofi.hide-scrollbar:    true
+#rofi.markup-rows:       false
+#rofi.scrollbar-width:   7
+#rofi.fullscreen:        false 
+#rofi.fake-transparency: false

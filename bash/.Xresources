@@ -1,3 +1,6 @@
+! ==============================
+! Urxvt
+! ==============================
 URxvt*termName: rxvt-unicode
 URxvt*depth: 32
 URxvt*borderLess: false
@@ -78,3 +81,4 @@ URxvt.colorBD:     [90]#fe8019
 URxvt.colorUL:     [90]#83a598
 !URxvt.scrollColor: [90]#504945
 !URxvt.troughColor: [90]#3C3836
+
