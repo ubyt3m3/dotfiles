@@ -9,7 +9,7 @@ fi
 # Slackware default for $LANG is en_US
 # To support displaying Japanese while still getting 
 # messages in English, set below two env variables
-export LANG=ja_JP.utf-8
+export LANG=ja_JP.UTF-8
 export LC_MESSAGES=en_US
 export EDITOR=nvim
 #export MPD_HOST=/home/ubyt3m3/.config/mpd/socket

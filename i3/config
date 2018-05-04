@@ -149,11 +149,6 @@ assign [class="chromium"] $ws5
 assign [class="Pcmanfm"] $ws6
 assign [class="VirtualBox" title="Oracle VM VirtualBox Manager"] $ws9
 
-##========================================
-# Custome keybindings:
-##========================================
-bindsym $mod+Shift+w exec "VBoxManage startvm win7vb" workspace $ws0;move workspace to output DVI-I-3 
-
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -188,6 +183,33 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+##
+#
+##
+#for_window [class="^Gimp*"] floating enable, border normal
+
+##========================================
+# Custome keybindings:
+##========================================
+bindsym $mod+Shift+w exec "VBoxManage startvm win7vb" workspace $ws0;move workspace to output DVI-I-3 
+
+## Power Management
+mode "power" {
+        # Current session (e) exit, (l) lock, (r) reboot/shutdown -r now, (p) poweroff/shutdown -h now
+        bindsym e exec --no-startup-id i3-msg exit, mode "default"
+        #bindsym l exec --no-startup-id i3lock, mode "default"
+        bindsym l exec --no-startup-id $HOME/scripts/lock_blur_i3.sh, mode "default"
+        bindsym r exec --no-startup-id sudo /sbin/shutdown -r now, mode "default"
+        bindsym p exec --no-startup-id sudo /sbin/shutdown -h now, mode "default"
+
+        # Back to default settings
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+Pause mode "power"
+
+
 ##========================================
 # Custom color palettes:
 ##========================================
@@ -199,16 +221,16 @@ client.urgent           #d64e4e #d64e4e #ffffff #d64e4e   #d64e4e
 client.placeholder      #100c08 #100c08 #ffffff #212121   #262626
 client.background       #100c08
 
+##========================================
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+##========================================
 bar {
         status_command python3 ~/.config/i3/i3pystatusconfig.py 
 #        status_command i3status -c ~/.config/i3/i3status.conf
 #        status_command i3blocks -c ~/.config/i3/i3blocks.conf
 
         font pango:DejaVu Sans Mono fontAwesome 9
-#        separator_symbol "::"
-#        separator_symbol            "::"
         separator_symbol            "  :  "
 
 #   Color panel
@@ -230,4 +252,3 @@ bar {
 # Execute a program at start up
 ##========================================
 exec_always --no-startup-id nitrogen --restore
-exec --no-startup-id compton -CGb --config ~/.config/compton/compton.config
