@@ -198,7 +198,7 @@ mode "power" {
         # Current session (e) exit, (l) lock, (r) reboot/shutdown -r now, (p) poweroff/shutdown -h now
         bindsym e exec --no-startup-id i3-msg exit, mode "default"
         #bindsym l exec --no-startup-id i3lock, mode "default"
-        bindsym l exec --no-startup-id $HOME/scripts/lock_blur_i3.sh, mode "default"
+        bindsym l exec --no-startup-id $HOME/Scripts/i3lock/lock_blur_i3.sh, mode "default"
         bindsym r exec --no-startup-id sudo /sbin/shutdown -r now, mode "default"
         bindsym p exec --no-startup-id sudo /sbin/shutdown -h now, mode "default"
 
