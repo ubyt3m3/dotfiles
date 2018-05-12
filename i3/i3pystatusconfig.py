@@ -82,6 +82,7 @@ status.register("cpu_usage",
 # Note: the network module requires PyPI package netifaces
 status.register("network",
     interface="eth0",
+    on_leftclick="",
     color_up="#fffff3",
     color_down="#6e6e6e",
     format_up="  {v4cidr}",
@@ -123,9 +124,11 @@ status.register("mem",
 
 # Shows pulseaudio default sink volume
 #
+# on_left_click="" disables bringing up volume control panel
 # Note: requires libpulseaudio from PyPI
 status.register("pulseaudio",
     format="  {volume}%",
+    on_leftclick="",
     color_muted="#6e6e6e",
     color_unmuted="#fffff3",
     format_muted="  Muted",)
