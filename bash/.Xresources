@@ -1,7 +1,7 @@
 ! ==============================
 ! Urxvt
 ! ==============================
-URxvt*termName: rxvt-unicode
+URxvt*terminalName: rxvt-unicode-256color
 URxvt*depth: 32
 URxvt*borderLess: false
 URxvt*tintColor: #FFFAF0
@@ -22,6 +22,7 @@ URxvt*visualBell: true
 !URxvt*tintColor: black
 
 !! scroll
+! Do not scroll with output
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 ! Scroll to the bottom when non-special keys are pressed
@@ -42,19 +43,34 @@ URxvt*cursorColor: #ff5733
 !!URxvt.tabbed.tab-fg: 14 
 !!URxvt.tabbed.tab-bg: 6 
 
-!! urlLauncher settings
-URxvt*urlLauncher: /usr/bin/firefox
-URxvt*matcher.button: 1
+!! Perl extensions
+URxvt.perl-ext-common: default,clipboard,selection-to-clipboard,pasta,matcher,keyboard-select
+URxvt.keysym.M-u: perl:url-select:select_next
+!! ALT-CTRL-c
+URxvt.keysym.M-c: perl:clipboard:copy
+!! ALT-CTRL-v
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.url-launcher: /usr/bin/chromium
+URxvt.underlineURLs: True
+URxvt.matcher.button: 1
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.Control-Shift-V: perl:pasta:paste
+!! Comment this if you do not want copy when text is selected
+URxvt.clipboard.autocopy: true
 
 !! fonts
-URxvt*font: xft:Ricty:pixelsize=13:style=Regular:antialias=true:hinting=true, \
-xft:Sazanami Gothic:style=Gothic-Regular:pixelsize=13, \
-xft:Kochi Gothic:pixelsize=13:antialias=true;hinting=true, \
-xft:Font Awesome 5 Free Regular:pixelsie=13:style=Regular, \
-xft:Font Awesome 5 Free Solid:pixelsize=13:style=Solid, \
-xft:Dejavu Sans Mono:pixelsize=13:style=Regular:antialias=true
-URxvt*boldFont: xft:Ricty:pixelsize=13:style=Bold:antialiase=true:hinting, \
-xft:Dejavu Sans Mono:pixelsize=13:style=Bold:antialias=true
+!URxvt*font: xft:Ricty:pixelsize=13:style=Regular:antialias=true:hinting=true, \
+!xft:Sazanami Gothic:style=Gothic-Regular:pixelsize=13, \
+!xft:Kochi Gothic:pixelsize=13:antialias=true;hinting=true, \
+!xft:Font Awesome 5 Free Regular:pixelsie=13:style=Regular, \
+!xft:Font Awesome 5 Free Solid:pixelsize=13:style=Solid, \
+!URxvt*boldFont: xft:Ricty:pixelsize=13:style=Bold:antialiase=true:hinting, \
+URxvt*Font: xft:Inconsolata:size=13:style=Regular:antialias=true:hinting=true, \
+xft:Font Awesome 5 Free:size=13:style=Regular:antialias=true:hinting=true, \
+xft:Kochi Gothic:size=13:style=Regular:antialias=true:hinting=true, \
+xft:Dejavu Sans Mono:size=15:style=Regular:antialias=true
+URxvt*boldFont: xft:Inconsolata:size=15:style=Bold:antialias=true:hinting=true, \
+xft:Dejavu Sans Mono:size=13:style=Bold:antialias=true
 !URxvt.letterSpace: -4
 
 !! color
@@ -81,4 +97,3 @@ URxvt.colorBD:     [90]#fe8019
 URxvt.colorUL:     [90]#83a598
 !URxvt.scrollColor: [90]#504945
 !URxvt.troughColor: [90]#3C3836
-

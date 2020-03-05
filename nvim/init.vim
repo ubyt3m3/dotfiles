@@ -17,7 +17,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'itchyny/landscape.vim'
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
-Plug 'taohex/lightline-buffer'
+Plug 'taohexxx/lightline-buffer'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'

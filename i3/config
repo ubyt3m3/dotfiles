@@ -43,7 +43,7 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # Start rofi
-bindsym $mod+d exec "rofi -modi ssh#window#drun#run -show drun -sidebar-mode"
+bindsym $mod+d exec "rofi -modi ssh#drun#run -show drun -sidebar-mode"
 
 # change focus
 bindsym $mod+h focus left
