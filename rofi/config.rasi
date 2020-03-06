@@ -1,5 +1,5 @@
 configuration {
-    modi:              "ssh,drun,run";
+    modi:              "ssh,window,drun,run";
     sidebar-mode:      true;
     terminal:          "urxvt"; 
     ssh-client:        "ssh";

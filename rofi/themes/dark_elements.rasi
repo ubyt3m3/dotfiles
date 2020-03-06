@@ -9,6 +9,7 @@
     selectioncolor: #ffffff;
     selectedtextcolor: #d93636;
 
+transparent: rgba(0,0,0,1);
 
     font-size: 1px;
     border-color: @separatorcolor;

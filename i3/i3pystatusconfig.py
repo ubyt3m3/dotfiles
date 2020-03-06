@@ -5,7 +5,7 @@ import os
 # showing dates in Japanese
 os.environ['LANG'] = 'en_US'
 
-status = Status(logfile='$HOME/var/i3pystatus.log')
+status = Status(logfile='$HOME/var/logs/i3pystatus.log')
 
 # Displays clock like this:
 # Tue 30 Jul 11:59:46 PM KW31
@@ -81,7 +81,7 @@ status.register("cpu_usage",
 #
 # Note: the network module requires PyPI package netifaces
 status.register("network",
-    interface="eth0",
+    interface="enp2s0",
     on_leftclick="",
     color_up="#fffff3",
     color_down="#6e6e6e",
@@ -99,9 +99,10 @@ status.register("network",
 # Shows disk usage of /home
 # Format:
 # 42/128G
-#status.register("disk",
-#    path="/home",
-#    format="  {used} / {total}GB",)
+status.register("disk",
+    path="/home",
+    format="  {used} / {total}GB",
+    )
 
 # Shows disk usage of /
 # Format:
@@ -126,12 +127,12 @@ status.register("mem",
 #
 # on_left_click="" disables bringing up volume control panel
 # Note: requires libpulseaudio from PyPI
-status.register("pulseaudio",
-    format="  {volume}%",
-    on_leftclick="",
-    color_muted="#6e6e6e",
-    color_unmuted="#fffff3",
-    format_muted="  Muted",)
+#status.register("pulseaudio",
+#    format="  {volume}%",
+#    on_leftclick="",
+#    color_muted="#6e6e6e",
+#    color_unmuted="#fffff3",
+#    format_muted="  Muted",)
 
 # Shows mpd status
 # Format:
