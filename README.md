@@ -33,3 +33,5 @@ $ tar -xzvf themes/MorningGlory.tar.gz -C ~/.themes/
 [urxvt]
 $ cp bash/.Xresources ~/
 
+[Wallpapers]
+Use nitrogen to set it up
