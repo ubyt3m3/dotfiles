@@ -123,16 +123,15 @@ status.register("mem",
     divisor=1073741824,
     )
 
-# Shows pulseaudio default sink volume
+# Shows alsa default sink volume
 #
 # on_left_click="" disables bringing up volume control panel
-# Note: requires libpulseaudio from PyPI
-#status.register("pulseaudio",
-#    format="  {volume}%",
-#    on_leftclick="",
-#    color_muted="#6e6e6e",
+status.register("alsa",
+    format="  {volume}%",
+    on_leftclick="",
+    color_muted="#6e6e6e",
 #    color_unmuted="#fffff3",
-#    format_muted="  Muted",)
+    format_muted="  Muted",)
 
 # Shows mpd status
 # Format:
