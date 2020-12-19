@@ -20,11 +20,15 @@ status.register("clock",
 # (the default value for format is used)
 #status.register("load")
 
+# Shows your CPU temperature, if you have a Intel CPU
+status.register("temp",
+    format=" {temp:.0f}°C",
+    )
+
 # Show CPU usage
 status.register("cpu_usage",
     format="  {usage:03.0f}%",
     color="#fffff3",
-    interval=1,
     )
 # Shows your CPU temperature, if you have a Intel CPU
 #status.register("temp",
@@ -81,7 +85,7 @@ status.register("cpu_usage",
 #
 # Note: the network module requires PyPI package netifaces
 status.register("network",
-    interface="enp2s0",
+    interface="eno1",
     on_leftclick="",
     color_up="#fffff3",
     color_down="#6e6e6e",

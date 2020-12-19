@@ -145,10 +145,13 @@ bindsym $mod+Shift+0 move container to workspace $ws0
 # Assign workspaces:
 ##========================================
 assign [class="Firefox"] $ws4
+for_window [class="Firefox"] focus
 assign [class="chromium"] $ws5
-assign [class="Pcmanfm"] $ws6
+for_window [class="chromium"] focus
+assign [class="Pcmanfm"] $ws6 
+for_window [class="Pcmanfm"] focus 
 assign [class="VirtualBox" title="Oracle VM VirtualBox Manager"] $ws9
-
+for_window [class="VirtualBox"] focus
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -191,7 +194,7 @@ bindsym $mod+r mode "resize"
 ##========================================
 # Custome keybindings:
 ##========================================
-bindsym $mod+Shift+w exec "VBoxManage startvm win7vb" workspace $ws0;move workspace to output DVI-I-3 
+bindsym $mod+Shift+w exec "VBoxManage startvm Win10provb" workspace $ws0;move workspace to output DVI-I-3 
 
 ## Power Management
 mode "power" {
@@ -226,7 +229,8 @@ client.background       #100c08
 # finds out, if available)
 ##========================================
 bar {
-        status_command python3 ~/.config/i3/i3pystatusconfig.py 
+        status_command i3pystatus -c ~/.config/i3/pystatusconfig.py 
+#        status_command python3 ~/.config/i3/i3pystatusconfig.py 
 #        status_command i3status -c ~/.config/i3/i3status.conf
 #        status_command i3blocks -c ~/.config/i3/i3blocks.conf
 
@@ -251,4 +255,4 @@ bar {
 ##========================================
 # Execute a program at start up
 ##========================================
-exec_always --no-startup-id nitrogen --restore
+#exec_always --no-startup-id nitrogen --restore
