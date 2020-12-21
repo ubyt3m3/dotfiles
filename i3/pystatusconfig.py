@@ -14,6 +14,8 @@ status.register("clock",
     format="%b %e (%a)  %H:%M %p ",
     color="#fffff3",
     interval=1,
+    on_rightclick="gsimplecal",
+    on_leftclick="gsimplecal",
     )
 
 # Shows the average load of the last minute and the last 5 minutes
@@ -131,11 +133,11 @@ status.register("mem",
 #
 # on_left_click="" disables bringing up volume control panel
 status.register("alsa",
-    format="  {volume}%",
+    format="  {volume}%",
     on_leftclick="",
     color_muted="#6e6e6e",
 #    color_unmuted="#fffff3",
-    format_muted="  Muted",)
+    format_muted="  Muted",)
 
 # Shows mpd status
 # Format:
